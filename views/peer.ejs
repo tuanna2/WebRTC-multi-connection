@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Call-By-UserName using RTCMultiConnection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <style type="text/css">
+        table {
+          width: 100%;
+        }
+        td {
+          vertical-align: top;
+        }
+        td:first-child {
+          text-align: right;
+          width: 45%;
+        }
+        td:last-child {
+          text-align: left;
+          padding-left: 10px;
+          width: 45%;
+        }
+    </style>
+</head>
+<body>
+
+  <h1>
+    Call-By-UserName
+    <p class="no-mobile">
+      Call Any Person By His UserName.
+    </p>
+  </h1>
+
+  <section class="make-center">
+    <table>
+        <tr>
+            <td style="padding-bottom: 40px;">
+                <label for="current-username">Your UserName:</label>
+                <input type="text" id="current-username" value="you" autocorrect=off autocapitalize=off size=20>
+            </td>
+
+            <td>
+                <button id="change-your-own-username">Set Your UserName</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="callee-username">Callee UserName:</label>
+                <input type="text" id="callee-username" value="he" autocorrect=off autocapitalize=off size=20>
+            </td>
+            <td>
+                <button id="join-callee-using-his-username" disabled>Make a Video Call</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <div id="videos-container" style="margin: 20px 0;"></div>
+            </td>
+        </tr>
+    </table>
+
+    
+  </section>
+
+  <script src="/js/RTCMultiConnection.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- custom layout for HTML5 audio/video elements -->
+<link rel="stylesheet" href="/css/getHTMLMediaElement.css">
+<script src="/js/getHTMLMediaElement.js"></script>
+<script src="/js/peer_to_peer.js"></script>
+  <footer>
+    <small id="send-message"></small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get User Media</title>
+    <link rel="stylesheet" href="/css/colorVideo.css">
+</head>
+<body>
+    <button id="btn-start">Start Streaming</button>
+    <button id="btn-hu">Hang Up</button>
+     <video id="localStream" width="1200" height="800" controls></video>
+</br>
+     <label for="filter">Filter: </label>
+     <select id="filter">
+         <option value="none">None</option>
+         <option value="blur">Blur</option>
+         <option value="grayscale">Grayscale</option>
+         <option value="invert">Invert</option>
+         <option value="sepia">Sepia</option>
+     </select>
+    <button id="btn-canvas">Take snapshot</button>
+    <canvas id="canvas" width="470" height="360"></canvas>
+     <script src="/js/get_user_media.js"></script>
+</body>
+</html>
